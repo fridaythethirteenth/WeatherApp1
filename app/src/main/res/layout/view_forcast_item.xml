@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="96dp">
+
+    <TextView
+        android:id="@+id/forecast_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="50dp"
+        android:paddingEnd="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="72" />
+
+    <TextView
+        android:id="@+id/forecasted_sunrise_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/forecast_date"
+        app:layout_constraintBottom_toBottomOf="@+id/forecast_date"
+        app:layout_constraintEnd_toEndOf="@id/forecast_date"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="15sp"
+
+        tools:text="Sunrise"
+        />
+
+    <TextView
+        android:id="@+id/forecasted_sunset_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/forecasted_sunrise_time"
+        app:layout_constraintEnd_toEndOf="@+id/forecasted_sunrise_time"
+        app:layout_constraintTop_toBottomOf="@+id/forecasted_sunrise_time"
+
+        tools:text="Sunset"
+        />
+
+    <TextView
+        android:id="@+id/forecasted_temp_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/forecasted_temp_high"
+        app:layout_constraintStart_toStartOf="@+id/forecasted_temp_high"
+        app:layout_constraintEnd_toEndOf="@+id/forecasted_temp_high"
+
+
+
+        tools:text="Temp Low"
+        />
+
+    <TextView
+        android:id="@+id/forecasted_temp_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/forecast_date"
+        app:layout_constraintEnd_toStartOf="@+id/forecasted_sunrise_time"
+
+        android:layout_marginRight="150sp"
+
+        tools:text="Temp High"
+        />
+
+    <TextView
+        android:id="@+id/forecasted_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/forecasted_temp_high"
+        app:layout_constraintBottom_toBottomOf="@+id/forecasted_temp_high"
+        app:layout_constraintStart_toEndOf="@+id/forecasted_temp_high"
+
+        android:layout_marginStart="20sp"
+
+
+
+        tools:text="Pressure"
+        />
+
+    <TextView
+        android:id="@+id/forecasted_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/forecasted_temp_low"
+        app:layout_constraintBottom_toBottomOf="@+id/forecasted_temp_low"
+        app:layout_constraintStart_toEndOf="@+id/forecasted_temp_low"
+
+        android:layout_marginStart="20sp"
+
+        tools:text="Humidity"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

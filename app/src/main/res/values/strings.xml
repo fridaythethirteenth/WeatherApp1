@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="city_name">St. Paul, MN</string>
+    <string name="current_temp">72</string>
+    <string name="forecast">Forecast</string>
+    <string name="degree_temp">%d°</string>
+
+</resources>

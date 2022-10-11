@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/city_name"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/current_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="72\u00B0"
+        android:textSize="72sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city_name" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feels like 78\u00B0"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/current_temp"
+        app:layout_constraintStart_toStartOf="@+id/current_temp"
+    />
+    <ImageView
+        android:id="@+id/current_conditions"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="60dp"
+        android:src="@drawable/sunny"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toBottomOf="@+id/current_temp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/current_temp" />
+
+    <TextView
+        android:id="@+id/current_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Low 65\u00B0"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/current_temp"
+        app:layout_constraintStart_toStartOf="@+id/current_temp"
+        />
+
+    <TextView
+        android:id="@+id/current_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High 80\u00B0"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/current_low"
+        app:layout_constraintStart_toStartOf="@+id/current_temp"
+        />
+    <TextView
+        android:id="@+id/current_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humidity 100%"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/current_high"
+        app:layout_constraintStart_toStartOf="@+id/current_temp"
+        />
+    <TextView
+        android:id="@+id/current_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pressure 1023 hPa"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/current_humidity"
+        app:layout_constraintStart_toStartOf="@+id/current_temp"
+        />
+
+    <Button
+        android:id="@+id/forecastButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forecast"
+        android:layout_marginBottom="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
