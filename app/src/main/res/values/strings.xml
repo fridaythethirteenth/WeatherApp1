@@ -4,5 +4,10 @@
     <string name="current_temp">72</string>
     <string name="forecast">Forecast</string>
     <string name="degree_temp">%d°</string>
+    <string name="feels_like">Feels like 72</string>
+    <string name="low_temp">56</string>
+    <string name="high_temp">80</string>
+    <string name="humidity">69%</string>
+    <string name="pressure">Pressure: 1023kpa</string>
 
 </resources>
