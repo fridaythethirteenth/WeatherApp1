@@ -3,6 +3,8 @@ package com.example.weatherapp.ui
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Button
+import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.Alignment
@@ -17,11 +19,15 @@ import com.example.weatherapp.R
 
 
 
+
+
 @Composable
-fun CurrentConditions() {
+fun CurrentConditions(
+    onForecastButtonClick: () -> Unit,
+) {
     Column(
-            modifier = Modifier.padding(16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier.padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
 
     ) {
         Text(
@@ -72,9 +78,13 @@ fun CurrentConditions() {
             Text(text = stringResource(id = R.string.humidity), style = textStyle)
             Text(text = stringResource(id = R.string.pressure), style = textStyle)
         }
+        Spacer(modifier = Modifier.height(72.dp))
+        Button(onClick = onForecastButtonClick) {
+            Text(text = stringResource(id = R.string.forecast))
+
+        }
 
     }
-
 }
 
 @Preview(
@@ -82,5 +92,5 @@ fun CurrentConditions() {
 )
 @Composable
 fun CurrentConditionsPreview() {
-    CurrentConditions()
+    CurrentConditions {}
 }
