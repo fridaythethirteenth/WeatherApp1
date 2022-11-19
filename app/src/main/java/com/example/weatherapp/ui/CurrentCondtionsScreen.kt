@@ -1,5 +1,6 @@
 package com.example.weatherapp.ui
 
+import android.annotation.SuppressLint
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -15,14 +16,30 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.weatherapp.R
+import com.example.weatherapp.models.CurrentConditions
 
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
+@Composable
+fun CurrentConditions(
+    viewModel: CurrentConditionsViewModel = hiltViewModel(),
+    onForecastButtonClick: () -> Unit,
 
+) {
+    Scaffold (
+        topBar = { AppBar(title = "WeatherApp")},
+    ) {
+        CurrentConditionsContent {
+            onForecastButtonClick()
+        }
+    }
+}
 
 
 @Composable
-fun CurrentConditions(
+fun CurrentConditionsContent(
     onForecastButtonClick: () -> Unit,
 ) {
     Column(
@@ -92,5 +109,5 @@ fun CurrentConditions(
 )
 @Composable
 fun CurrentConditionsPreview() {
-    CurrentConditions {}
+    CurrentConditionsContent {}
 }
