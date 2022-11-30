@@ -79,7 +79,7 @@ private fun ForecastRow(item: DayForecast) {
             fontSize = 16.sp,
         )
         Spacer(modifier = Modifier.weight(1f, fill = true))
-        Column() {
+        Column {
             Text(
                 text = stringResource(id = R.string.high_temp, item.forecastTemp.max.toInt()),
                 style = textStyle,
